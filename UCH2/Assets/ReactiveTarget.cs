@@ -5,6 +5,10 @@ using UnityEngine;
 public class ReactiveTarget : MonoBehaviour
 {
     public void ReactToHit() {
+        WanderingAI behaviour = GetComponent<WanderingAI>();
+        if(behaviour != null) {
+            behaviour.SetAlive(false);
+        }
         StartCoroutine(Die());
     }
     // Start is called before the first frame update
