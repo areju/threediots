@@ -11,18 +11,7 @@ public class ReactiveTarget : MonoBehaviour
         }
         StartCoroutine(Die());
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+  
     private IEnumerator Die() {
         this.transform.Rotate(-75,0,0);
         yield return new WaitForSeconds(1.5f);
